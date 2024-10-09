@@ -1,27 +1,16 @@
 <?php
-function capital($pays) {
-    switch ($pays) {
-        case 'France':
-            return 'Paris';
-        case 'Allemagne':
-            return 'Berlin';
-        case 'Italie':
-            return 'Rome';
-        case 'Maroc':
-            return 'Rabat';
-        case 'Espagne':
-            return 'Madrid';
-        case 'Portugal':
-            return 'Lisbonne';
-        case 'Angleterre':
-            return 'Londres';
-        default:
-            return 'Inconnu';
+function listHTML($arg, $elements) {
+    if (empty($arg) && empty($elements)) {
+        return null;
     }
-}
 
-echo capital('France');   
-echo capital('Allemagne');  
-echo capital('Italie');     
-echo capital('Canada');     
+    $html = "<h3>$arg</h3><ul>";
+    foreach ($elements as $element) {
+        $html .= "<li>$element</li>";
+    }
+    $html .= "</ul>";
+
+    return $html;
+}
+echo listHTML("Capitale", ["Paris", "Berlin", "Moscou"]);
 ?>
