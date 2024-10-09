@@ -1,11 +1,11 @@
 <?php
-function plusGrand($tab){
+function plusPetit($tab){
     $tab=array(55,122,62,656,454);
 if (empty($tab)){
     return null;
 }else {
-    return max($tab);
+    return min($tab);
 }
 }
-echo plusGrand($tab);
+echo plusPetit($tab);
 ?>
