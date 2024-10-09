@@ -1,12 +1,12 @@
 <?php
-function premierElementTableau($tab){
+function dernierElementTableau($tab){
     $tab=array(0,1,6,68,48);
     if (empty($tab)){
         return null;
 
     }else {
-    return $tab[0];
+    return end($tab);
 }
 }
-echo premierElementTableau($tab);
+echo dernierElementTableau($tab);
 ?>
