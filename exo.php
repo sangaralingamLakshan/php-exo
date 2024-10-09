@@ -1,12 +1,11 @@
 <?php
-function estIlMajeure($arg){
-    if ($arg>=18){
-        return true;
+function plusGrand($arg1,$arg2){
+    if ($arg1>$arg2){
+        return $arg1;
     }else {
-        return false;
+        return $arg2;
     }
-}
-echo estIlMajeure(5);
-echo estIlMajeure(34);
 
+
+}
 ?>
