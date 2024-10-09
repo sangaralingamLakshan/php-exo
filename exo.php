@@ -1,12 +1,11 @@
 <?php
-function dernierElementTableau($tab){
-    $tab=array(0,1,6,68,48);
-    if (empty($tab)){
-        return null;
-
-    }else {
-    return end($tab);
+function plusGrand($tab){
+    $tab=array(55,122,62,656,454);
+if (empty($tab)){
+    return null;
+}else {
+    return max($tab);
 }
 }
-echo dernierElementTableau($tab);
+echo plusGrand($tab);
 ?>
