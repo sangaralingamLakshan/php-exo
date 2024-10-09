@@ -1,7 +1,12 @@
 <?php
-function multiplication($arg1,$arg2){
-    echo $arg1*$arg2;
-
+function estIlMajeure($arg){
+    if ($arg>=18){
+        return true;
+    }else {
+        return false;
+    }
 }
-echo multiplication(5,5)
+echo estIlMajeure(5);
+echo estIlMajeure(34);
+
 ?>
