@@ -1,11 +1,11 @@
 <?php
-function plusPetit($tab){
-    $tab=array(55,122,62,656,454);
-if (empty($tab)){
-    return null;
-}else {
-    return min($tab);
+function verificationPassword($arg){
+    if (strlen($arg)>=8){
+        return true ;
+    } else {
+        return false;
+    }
+
 }
-}
-echo plusPetit($tab);
+echo verificationPassword(lakzduia)
 ?>
