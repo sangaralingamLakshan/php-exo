@@ -1,6 +1,12 @@
 <?php
-function plusPetit($arg1,$arg2,$arg3){
-    return min($arg1,$arg2,$arg3);
-    }
-echo plusPetit(9,54,1);
+function premierElementTableau($tab){
+    $tab=array(0,1,6,68,48);
+    if (empty($tab)){
+        return null;
+
+    }else {
+    return $tab[0];
+}
+}
+echo premierElementTableau($tab);
 ?>
