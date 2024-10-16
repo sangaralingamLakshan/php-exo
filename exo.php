@@ -1,16 +1,12 @@
 <?php
-function listHTML($arg, $elements) {
-    if (empty($arg) && empty($elements)) {
-        return null;
-    }
-
-    $html = "<h3>$arg</h3><ul>";
-    foreach ($elements as $element) {
-        $html .= "<li>$element</li>";
-    }
-    $html .= "</ul>";
-
-    return $html;
+function remplacerLesLettres($chaine) {
+    $chaine = str_replace('e', '3', $chaine);
+    $chaine = str_replace('i', '1', $chaine);
+    $chaine = str_replace('o', '0', $chaine);
+    return $chaine;
 }
-echo listHTML("Capitale", ["Paris", "Berlin", "Moscou"]);
+
+echo remplacerLesLettres("Bonjour les amis") . "\n";
+echo remplacerLesLettres("Les cours de programmation Web sont trops cools");
+
 ?>
