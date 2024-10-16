@@ -1,11 +1,23 @@
 <?php
 include './libraryToInclude.php';
 
-function fonctionMagique() {
-    return fonctionDeMaLibrairie();
+function getUtilisateursAutorises() {
+    $utilisateurs = getAllUtilisateurs();
+    $utilisateursAutorises = [];
+
+    foreach ($utilisateurs as $utilisateur) {
+       
+        if (!$utilisateur->bloque && !empty($utilisateur->email) && $utilisateur->age >= 18) {
+            $utilisateursAutorises[] = $utilisateur;
+        }
+    }
+
+    return $utilisateursAutorises;
 }
 
 
-echo fonctionMagique();
+$utilisateursAutorises = getUtilisateursAutorises();
+echo ($utilisateursAutorises);
+
 
 ?>
